@@ -1,0 +1,22 @@
+.maintitle {
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+#maintitlebox {
+    text-align: center;
+    background-color: transparent;
+}
+
+#button-box {
+    background-color: transparent;
+}
+
+#search-box {
+    background-color: red;
+}
+
+.gifboxes {
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Lucida Console', monospace; 
+}

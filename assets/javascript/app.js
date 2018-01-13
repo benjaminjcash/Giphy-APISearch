@@ -1,10 +1,11 @@
 var topics = ["The Beatles", "The Doors", "Grateful Dead", "Jefferson Airplane"]
 
+//adds the search terms to a button and displays the button in the div.
 function renderButtons() {
     $("#button-box").empty();
     for (let i=0; i<topics.length; i++) {
         var newButton = $("<button>");
-        newButton.addClass("searchterms btn btn-default");
+        newButton.addClass("searchterms btn btn-primary");
         newButton.attr("data-name", topics[i]);
         newButton.text(topics[i]);
         $("#button-box").append(newButton);
@@ -39,7 +40,7 @@ function renderButtons() {
                 ratingText.text("Rating: " + rating);
                 var newDiv = $("<div>");
                 newDiv.attr({
-                    "class": "well",
+                    "class": "gifboxes",
                     "width": "40%",
                 });
                 newDiv.append(newImg);
@@ -67,6 +68,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=hXLKYWsEie9tH97LMJN
 $("#add-search-term").on("click", function (event) {
     event.preventDefault();
     var searchTerm = $("#search-term-input").val();
+    
     topics.push(searchTerm);
     renderButtons();
 });
